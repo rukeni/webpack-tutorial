@@ -15,9 +15,11 @@
 웹팩의 핵심인 엔트리 포인트와 아웃풋을 사용해보면서 맥락을 이해하겠습니다.
 실습 : [[ch1]]
 
-## Chapter 2. Loader
+## Chapter 2. Loader와 Plugin
 
-웹팩에서 다양한 유형의 파일을 처리하기 위한 전처리 도구입니다.(이미지, svg, css등)
+### Loader
+
+Loader는 웹팩에서 다양한 유형의 파일을 처리하기 위한 전처리 도구입니다.(이미지, svg, css등)
 로더를 사용하면 웹팩의 흐름은 다음과 같습니다.
 
 1. 엔트리 파일 설정
@@ -30,5 +32,17 @@
 이과정을 웹팩 공식문서는 이렇게 표현합니다.
 > "이봐 webpack 컴파일러, require ()/import 문 내에서 '.확장자' 파일로 확인되는 경로를 발견하면 번들에 추가하기 전에 확장자-loader를 사용하여 변환해."
 
+### Plugin
+
+Plugin은 웹팩의 **라이프사이클관점**에서 개입이 필요할때 사용합니다.
+대표적으로 HtmlWebpackPlugin이 있고 webpack의 결과물 script태그에 넣어서 을 html파일을 생성해주는 것입니다.
+
 실습 : [[ch2]]
 
+## 최적화 도구들
+
+- [webpack-chart](https://alexkuz.github.io/webpack-chart/)
+- [webpack-visualizer](https://chrisbateman.github.io/webpack-visualizer/)
+- [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+- [webpack-bundle-optimizer helper](https://webpack.jakoblind.no/optimize/)
+- [bundle-stats](https://github.com/relative-ci/bundle-stats)
